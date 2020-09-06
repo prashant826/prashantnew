@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8"/>
+        <title>site</title>
+</head>
+
+	
+<body>
+<h1 id ="demo">Enter your details</h1>
+<h2>Name of student:</h2>
+<h3 id="demo1"></h3>
+<h2>age of student:</h2>
+<h3 id="demo2"></h3>
+<h2>stream selected by student:</h2>
+<h3 id="demo3"></h3>
+<script type="text/javascript">
+
+ function display(){
+   var n= document.getElementById("name").value;
+   document.getElementById("demo1").innerHTML = n;
+   var age=document.getElementById("date").value;
+   var year=parseInt(age.slice(6,10));
+   var d = new Date();
+   var y=d.getFullYear()-year;
+   document.getElementById("demo2").innerHTML = y;
+   var stream=document.getElementById("stream").value;
+   document.getElementById("demo3").innerHTML = stream;
+ }
+</script>
+
+<form>
+Enter your name:
+<input type="text" id="name">
+Date of birth:(dd/mm/yy)
+<input type="text" id="date">
+Stream:
+<select id="stream">
+<option value="0">select a stream</option>
+<option value="science">science</option>
+<option value="commerce">commerce</option>
+<option value="arts">arts</option>
+<input type="button" value="select">
+</select>
+
+</form>
+<button onclick="display();">display info</button>
+</body>
+
+</html>
